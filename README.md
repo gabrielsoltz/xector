@@ -6,7 +6,7 @@
 
 ## What the f* is this?
 
-The code is the law: every configuration could lead to a security breach; is not what you don't allow to do, is about what you actually allow. Let me see the config...
+The code is the law: every configuration could lead to a security breach; is not what you don't allow to do, is about what you actually allow.
 
 ## Show me the configs
 
