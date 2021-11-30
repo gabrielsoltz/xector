@@ -8,6 +8,10 @@ In general, the first reaction when we find a malicious fraud of any type is try
 what else can we do?
 Data.
 
+## How to use it
+
+`./xector.py -t https://www.example.com`
+
 ## Modules
 
 ### URL
