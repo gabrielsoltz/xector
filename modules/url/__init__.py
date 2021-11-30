@@ -3,11 +3,16 @@ from tqdm import tqdm
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urljoin, urlparse
 import favicon
+import sys
 
 class URLModule():
     
     def __init__(self, url):
-        self.url = url
+        if self.is_valid(url):
+            self.url = url
+        else:
+            print('Invalid URL')
+            sys.exit(1)
         self.soup = bs(requests.get(self.url).content, "html.parser")
         self.images = self.get_images_urls()
         self.links = self.get_links()
@@ -60,5 +65,8 @@ class URLModule():
         return js
 
     def get_favicon(self):
+        icons_urls = []
         icons = favicon.get(self.url)
-        return icons
+        for icon in icons:
+            icons_urls.append(icon.url)
+        return icons_urls
