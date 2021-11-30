@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import json
 
 from modules.url import URLModule
 from modules.network import NetworkModule
@@ -29,4 +30,4 @@ if __name__ == "__main__":
         {'NETWORKData': NETWORKData}
     ]}
     
-    print (AllData)
+    print(json.dumps(AllData, indent=4, sort_keys=True))
